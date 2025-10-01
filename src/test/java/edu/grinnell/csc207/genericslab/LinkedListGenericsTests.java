@@ -5,16 +5,16 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class LinkedListIntTests {
+public class LinkedListGenericsTests {
     @Test
     public void emptyListTest() {
-        LinkedListInt l = new LinkedListInt();
+        LinkedListGenerics<Integer> l = new LinkedListGenerics<Integer>();
         assertEquals(0, l.size());
     }
 
     @Test
     public void listAddSize10Nums() {
-        LinkedListInt l = new LinkedListInt();
+        LinkedListGenerics<Integer> l = new LinkedListGenerics<Integer>();
         for (int i = 0; i < 10; i++) {
             l.add(i);
         }
@@ -23,7 +23,7 @@ public class LinkedListIntTests {
 
     @Test
     public void listAddNegNums() {
-        LinkedListInt l = new LinkedListInt();
+        LinkedListGenerics<Integer> l = new LinkedListGenerics<Integer>();
         l.add(-3);
         l.add(-10);
         l.add(-22);
@@ -34,7 +34,7 @@ public class LinkedListIntTests {
 
     @Test
     public void listGetSeveral() {
-        LinkedListInt l = new LinkedListInt();
+        LinkedListGenerics<Integer> l = new LinkedListGenerics<Integer>();
         int[] elements = new int[] {3, 8, 7, 2, 6, 5, 0};
         for (int i = 0; i < elements.length; i++) {
             l.add(elements[i]);
@@ -46,7 +46,7 @@ public class LinkedListIntTests {
 
     @Test
     public void listGetOOB() {
-        LinkedListInt l = new LinkedListInt();
+        LinkedListGenerics<Integer> l = new LinkedListGenerics<Integer>();
         l.add(3);
         l.add(2);
         l.add(7);
@@ -60,7 +60,7 @@ public class LinkedListIntTests {
 
     @Test
     public void listRemoveSome() {
-        LinkedListInt l = new LinkedListInt();
+        LinkedListGenerics<Integer> l = new LinkedListGenerics<Integer>();
         l.add(5);
         l.add(8);
         l.add(7);
@@ -80,7 +80,7 @@ public class LinkedListIntTests {
 
     @Test
     public void listRemoveOOB() {
-        LinkedListInt l = new LinkedListInt();
+        LinkedListGenerics<Integer> l = new LinkedListGenerics<Integer>();
         l.add(5);
         l.add(8);
         l.add(7);
