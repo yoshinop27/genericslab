@@ -2,6 +2,8 @@ package edu.grinnell.csc207.genericslab;
 
 import java.lang.classfile.TypeAnnotation.TargetInfo;
 
+import org.w3c.dom.Node;
+
 public class LinkedListGenerics<T> {
 /**
  * A linked implementation of the list ADT.
@@ -105,5 +107,25 @@ public class LinkedListGenerics<T> {
             }
         }
     }
+    /**
+     * Inserts sep between each element of the list.
+     * @param sep element of Type T 
+     */
+    public void intersperse(T sep) {
+        if (first == null || first.next == null) {
+            return;
+        }
+        Node<T> cur = first;
+        Node<T> next = cur.next;
+        while(cur.next != null){
+            cur.next = new Node<T>(sep, next); // assign new node of sep after cur
+            cur = next; // assign cur to next
+            next = next.next; // move next to its next node
+        } 
+    }
+
+    /**
+     * 
+     */
 }
 

@@ -1,9 +1,11 @@
-package edu.grinnell.csc207.genericslab;
+package edu.oldTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
+
+import edu.grinnell.csc207.genericslab.OldClasses.LinkedListString;
 
 public class LinkedListStringTests {
     @Test

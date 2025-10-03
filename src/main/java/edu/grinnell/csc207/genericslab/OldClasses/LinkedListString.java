@@ -1,4 +1,4 @@
-package edu.grinnell.csc207.genericslab;
+package edu.grinnell.csc207.genericslab.OldClasses;
 
 /**
  * A linked implementation of the list ADT.
