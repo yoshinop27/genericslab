@@ -131,5 +131,17 @@ public class LinkedListGenerics<T> {
      * Thus we can't perform any comparisons.
      */
     
+    /**
+     * @return a string representation of the list
+     */
+    public String toString(){
+        String ret = "";
+        Node<T> cur = first;
+        while(cur != null){
+            ret += String.valueOf(cur.value);
+            cur = cur.next;
+        }
+        return ret;
+    }
 }
 
