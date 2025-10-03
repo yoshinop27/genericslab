@@ -130,6 +130,9 @@ public class LinkedListGenerics<T> {
      * Because we are implementing this in the generic class, we can't know what type we are gonna get and 
      * Thus we can't perform any comparisons.
      */
+    public T maximum(){
+        throw new UnsupportedOperationException();
+    }
     
     /**
      * @return a string representation of the list
@@ -142,6 +145,15 @@ public class LinkedListGenerics<T> {
             cur = cur.next;
         }
         return ret;
+    }
+
+    /**
+     * sorts the list using insertion sort
+     * This method can't be implemented by a similar argument to why maximum can't be implemented. We can't compare types T
+     * because we don't know what they are going to be until runtime
+     */
+    public void insertionSort(){
+        throw new UnsupportedOperationException();
     }
 }
 
