@@ -118,14 +118,18 @@ public class LinkedListGenerics<T> {
         Node<T> cur = first;
         Node<T> next = cur.next;
         while(cur.next != null){
-            cur.next = new Node<T>(sep, next); // assign new node of sep after cur
-            cur = next; // assign cur to next
-            next = next.next; // move next to its next node
-        } 
+            cur.next = new Node<T>(sep, next); // assign new node of sep after cur (in between cur and next)
+            cur = next; // reassign cur to next (after sep node)
+            next = next.next; // move next to its next node 
+        }
     }
 
     /**
-     * 
+     * maximum function
+     * @return maximum element in list of types T
+     * Because we are implementing this in the generic class, we can't know what type we are gonna get and 
+     * Thus we can't perform any comparisons.
      */
+    
 }
 
