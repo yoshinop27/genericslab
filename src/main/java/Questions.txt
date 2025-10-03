@@ -1,0 +1,2 @@
+1. Was part 3 implemented correctly?
+2. Did we have to use concepts we covered wednesday, implements, extends, super, etc

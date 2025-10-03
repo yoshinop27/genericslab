@@ -4,7 +4,7 @@ import java.lang.classfile.TypeAnnotation.TargetInfo;
 
 import org.w3c.dom.Node;
 
-public class LinkedListGenerics<T> {
+public class LinkedListGenerics<T> implements ListInterface<T>{
 /**
  * A linked implementation of the list ADT.
  */
@@ -32,6 +32,7 @@ public class LinkedListGenerics<T> {
      * 
      * @param value the value to add to the end of the list
      */
+    @Override
     public void add(T value) {
         if (first == null) {
             first = new Node<T>(value, null);
@@ -47,6 +48,7 @@ public class LinkedListGenerics<T> {
     /**
      * @return the number of elements in the list
      */
+    @Override
     public int size() {
         int sz = 0;
         Node<T> cur = first;
@@ -61,6 +63,7 @@ public class LinkedListGenerics<T> {
      * @param index the index of the element to retrieve
      * @return the value at the specified <code>index</code>
      */
+    @Override
     public T get(int index) {
         if (index < 0) {
             throw new IndexOutOfBoundsException(index);
@@ -84,6 +87,7 @@ public class LinkedListGenerics<T> {
      * @param index the index of the element to remove
      * @return the element at <code>index</code>
      */
+    @Override
     public T remove(int index) {
         if (index < 0 || (index == 0 && first == null)) {
             throw new IndexOutOfBoundsException(index);
