@@ -5,17 +5,17 @@ import java.util.Arrays;
 /**
  * An array-based implementation of a list.
  */
-public class ArrayList {
+public class ArrayList<T> {
 
     private static final int INITIAL_SIZE = 8;
-    private int[] data;
+    private Object[] data;
     private int sz;
 
     /**
      * Constructs a new, empty array list.
      */
     public ArrayList() {
-        this.data = new int[INITIAL_SIZE];
+        this.data = (T[]) new Object[INITIAL_SIZE];
         this.sz = 0;
     }
 
@@ -30,7 +30,7 @@ public class ArrayList {
      * 
      * @param value the value to add to the end of the list
      */
-    public void add(int value) {
+    public void add(T value) {
         ensureCapacity();
         data[sz++] = value;
     }
@@ -46,11 +46,11 @@ public class ArrayList {
      * @param index the index of the element to retrieve
      * @return the value at the specified <code>index</code>
      */
-    public int get(int index) {
+    public T get(int index) {
         if (index < 0 || index >= sz) {
             throw new IndexOutOfBoundsException(index);
         }
-        return data[index];
+        return (T)data[index]; // returns an object cast to type T
     }
 
     /**
@@ -59,11 +59,11 @@ public class ArrayList {
      * @param index the index of the element to remove
      * @return the element at <code>index</code>
      */
-    public int remove(int index) {
+    public T remove(int index) {
         if (index < 0 || index >= sz) {
             throw new IndexOutOfBoundsException(index);
         } else {
-            int ret = data[index];
+            T ret = (T) data[index]; // cast object to type T
             for (int i = index; i < data.length - 1; i++) {
                 data[i] = data[i + 1];
             }
