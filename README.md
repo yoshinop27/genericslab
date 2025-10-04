@@ -1,6 +1,6 @@
 # Generics Lab
 
-Authors: (_TODO: fill in names here!_)
+Authors: Preston and Maria
 
 ## Resources
 
